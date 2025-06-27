@@ -251,8 +251,6 @@ function loop() {
 }
 
 
-tetromino = getNextTetromino();
-
 // populate the empty state
 for (let row = -2; row < 20; row++) {
   playfield[row] = [];
@@ -261,6 +259,8 @@ for (let row = -2; row < 20; row++) {
     playfield[row][col] = 0;
   }
 }
+
+tetromino = getNextTetromino();
 
 // listen to keyboard events to move the active tetromino
 document.addEventListener('keydown', function (e) {
